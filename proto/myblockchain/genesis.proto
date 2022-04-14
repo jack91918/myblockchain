@@ -1,0 +1,14 @@
+syntax = "proto3";
+package danielfarina.myblockchain.myblockchain;
+
+import "gogoproto/gogo.proto";
+import "myblockchain/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/daniel-farina/myblockchain/x/myblockchain/types";
+
+// GenesisState defines the myblockchain module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
